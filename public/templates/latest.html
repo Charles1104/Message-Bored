@@ -1,11 +1,15 @@
-<h1>Messages</h1>
+<h2>Last 10 messages</h2>
 
-<div style="padding: 20px 0; ">
+<table>
+  <tr>
+    <th>Topic</th>
+    <th>Posting date</th>
+    <th>Author</th>
+  </tr>
 
-  <nav>
-    <ul >
-      <li ng-repeat="message in messages | orderBy:'-createdAt'" ><a ng-href="/latest">{{ message.Topic.name }} + {{ message.createdAt | date:'short'  }} + {{ message.Author.name }}</a></li>
-    </ul>
-  </nav>
-
-</div>
+  <tr ng-repeat="message in messages | orderBy:'-createdAt'">
+    <td> {{ message.Topic.name }} </td>
+    <td> {{ message.createdAt | date:'short'  }} </td>
+    <td> {{ message.Author.name }} </td>
+  </tr>
+</table>
