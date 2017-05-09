@@ -38,13 +38,18 @@ angular.module('app', ['ngRoute'])
         })
         .when('/latest', {
           templateUrl: '/templates/latest.html',
-          controller: 'LatestCtrl',
-          controllerAs: 'latest'
+          controller: 'MessagesCtrl',
+          controllerAs: 'Messages'
         })
         .when('/newtopic', {
           templateUrl: '/templates/newtopic.html',
           controller: 'TopicsCtrl',
           controllerAs: 'topics'
+        })
+        .when('/newmessage', {
+          templateUrl: '/templates/newmessage.html',
+          controller: 'MessagesCtrl',
+          controllerAs: 'Messages'
         });
 
       $locationProvider.html5Mode({

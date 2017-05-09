@@ -9,6 +9,13 @@ angular.module('app')
     },
     getMessagesById: function(id) {
       return $http.get(`/api/messages/${id}`);
+    },
+    createMessage: function(body) {
+      let newMessage = {};
+      newMessage.body = body;
+      newMessage.author_id = localStorage.user_id;
+      newMessage.topic_id = localStorage.topic_id;
+      return $http.post(`/api/messages/`, newMessage);
     }
 
   };

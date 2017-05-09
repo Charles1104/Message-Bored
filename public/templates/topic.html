@@ -6,7 +6,10 @@
     <p><span>Topic created by: </span> {{ topic.Creator.name }}</p>
   </div>
 
-  <h3>List of messages:</h3>
+  <div class="topicTable">
+    <p>List of messages:</p>
+    <a ng-href= "/newmessage" ng-if="loggedIn">New Message</a>
+  </div>
 
   <table>
     <tr>

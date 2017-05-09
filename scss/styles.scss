@@ -34,7 +34,6 @@ body {
    display: inline-block;
   }
 
-
   a:hover, a:active {
    background-color: #376380;
   }
@@ -135,6 +134,7 @@ h3{
 table {
    border-collapse: collapse;
    width: 100%;
+   margin-top: 15px;
 }
 
 th, td {
@@ -160,4 +160,37 @@ th {
 #errorLogin{
   font-family: 'BioRhyme', serif;
   color: #E16A08;
+}
+
+.topicTable{
+  font-family: 'BioRhyme', serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 25px;
+
+  p{
+    margin: 0px;
+    vertical-align: center;
+    font-weight: 700;
+  }
+
+  a:link, a:visited {
+   background-color: #4B85AC ;
+   color: white;
+   padding: 5px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+  }
+
+  a:hover, a:active {
+   background-color: #376380;
+  }
+}
+
+.messageInput{
+  width: 80%;
+  height: 100px;
 }

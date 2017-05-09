@@ -1,9 +1,10 @@
 angular.module('app')
 .controller('TopicsCtrl', [
   '$scope',
+  '$rootScope',
   '$location',
   'TopicsService',
-  function($scope,$location,TopicsService){
+  function($scope,$rootScope,$location,TopicsService){
 
     $scope.createTopic = function(name) {
 
@@ -24,6 +25,7 @@ angular.module('app')
       TopicsService.getTopic(window.location.href.slice(window.location.href.lastIndexOf('/')+1))
         .then((topic) => {
         $scope.topic = topic.data;
+        localStorage.setItem('topic_id', topic.data.id);
         });
       };
     }
