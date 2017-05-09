@@ -1,20 +1,22 @@
-<h2> Topic: {{ topic.name }} </h2>
+<div ng-init = 'loadTopic()'>
+  <h2> Topic: {{ topic.name }} </h2>
 
-<div class="topicInfo">
-  <p><span>Topic created on: </span> {{ topic.createdAt | date:'short'}}</p>
-  <p><span>Topic created by: </span> {{ topic.Creator.name }}</p>
+  <div class="topicInfo">
+    <p><span>Topic created on: </span> {{ topic.createdAt | date:'short'}}</p>
+    <p><span>Topic created by: </span> {{ topic.Creator.name }}</p>
+  </div>
+
+  <h3>List of messages:</h3>
+
+  <table>
+    <tr>
+      <th>Author</th>
+      <th>Posting time</th>
+    </tr>
+
+    <tr ng-repeat="message in topic.Messages | orderBy:'-createdAt'">
+      <td> {{ message.Author.name }} </td>
+      <td> {{ message.createdAt | date:'short'  }} </td>
+    </tr>
+  </table>
 </div>
-
-<h3>List of messages:</h3>
-
-<table>
-  <tr>
-    <th>Author</th>
-    <th>Posting time</th>
-  </tr>
-
-  <tr ng-repeat="message in topic.Messages | orderBy:'-createdAt'">
-    <td> {{ message.Author.name }} </td>
-    <td> {{ message.createdAt | date:'short'  }} </td>
-  </tr>
-</table>

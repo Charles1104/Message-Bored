@@ -1,13 +1,6 @@
-<h1>Create your new Topic</h1>
+<h2>Create your new Topic</h1>
 
-<h2>Name of the topic</h2><br>
-<input type="text"
-  ng-model="newTopic.name">
-<br>
-<h2>Creator ID</h2><br>
-<input type="text"
-  ng-model="newTopic.created_by">
-<br>
-<br>
-<input type="submit"
-  ng-click="createTopic(newTopic)">
+<div class="loginPage">
+  <input type="text" placeholder="Enter name of the topic" ng-model="name">
+  <input class="button button2" type="submit" ng-click="createTopic(name)">
+</div>
