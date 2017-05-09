@@ -1,26 +1,31 @@
 angular.module('app')
 .controller('TopicsCtrl', [
   '$scope',
+  '$location',
   'TopicsService',
-  function($scope, TopicsService){
+  function($scope,$location,TopicsService){
 
     $scope.createTopic = function(name) {
 
       TopicsService.registerTopic(name)
-      .then(data =>{
-        console.log(data);
-      });
+        .then(data =>{
+          $location.url("/");
+        });
     };
 
-    TopicsService.getTopics()
-      .then((topics) => {
-        $scope.topics = topics.data;
-      });
+    $scope.loadTopics = function(){
+      TopicsService.getTopics()
+        .then((topics) => {
+          $scope.topics = topics.data;
+        });
+    };
 
-    TopicsService.getTopic(window.location.href.slice(window.location.href.lastIndexOf('/')+1))
-      .then((topic) => {
-      $scope.topic = topic.data;
-    });
-  }
+    $scope.loadTopic = function() {
+      TopicsService.getTopic(window.location.href.slice(window.location.href.lastIndexOf('/')+1))
+        .then((topic) => {
+        $scope.topic = topic.data;
+        });
+      };
+    }
 ]);
 

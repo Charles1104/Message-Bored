@@ -8,7 +8,6 @@ angular.module('app')
 
     MessagesService.getLatestMessages()
       .then((messages) => {
-        console.log(messages.data);
         $scope.messages = messages.data;
       });
   }

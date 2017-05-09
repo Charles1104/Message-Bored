@@ -8,21 +8,39 @@ const {User, Message, Topic} = require('../../models');
 //const User = db.User;
 
 users.get('/:id', (req,res) => {
-  User.findOne({
-    where: {id: req.params.id},
-    include: [{
-      model:Message,
-      as:'Author',
+  if(!isNaN(parseInt(req.params.id))){
+    User.findOne({
+      where: {id: req.params.id},
       include: [{
-        model:Topic,
+        model:Message,
+        as:'Author',
+        include: [{
+          model:Topic,
+        }]
       }]
-    }]
-  })
-  //User.findById
-    .then((user) => {
-      res.json(user);
-    });
+    })
+    //User.findById
+      .then((user) => {
+        res.json(user);
+      });
+  } else {
+    User.findOne({
+      where: {name: req.params.id},
+      include: [{
+        model:Message,
+        as:'Author',
+        include: [{
+          model:Topic,
+        }]
+      }]
+    })
+    //User.findById
+      .then((user) => {
+        res.json(user);
+      });
+  }
 });
+
 
 users.get('/', (req,res) => {
   User.all()

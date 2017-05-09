@@ -27,24 +27,23 @@
           <a ng-href="/">Home</a></li>
           <a ng-href= "/users">Users</a>
           <a ng-href="/latest">Latest</a>
-          <a ng-href= "/newtopic">Create new topic</a>
+          <a ng-href= "/newtopic">New Topic</a>
+          <a ng-href= "/newmessage">New Message</a>
           <br>
         </div>
 
         <div class="logInfo" ng-if="loggedIn">
           <p>You are logged in as {{user}}</p>
-          <button type="button" ng-click="logOutUser()">Log Out</button>
+          <button class="button button1" type="button" ng-click="logOutUser()">Log Out</button>
         </div>
 
-        <div ng-controller= 'TopicsCtrl'>
-          <h2>List of topics</h2>
-            <ul >
-              <li ng-repeat="topic in topics" ><a ng-href="/topics/{{ topic.id }}">{{ topic.name }}</a></li>
-            </ul>
+        <div class="logInfo" ng-if="!loggedIn">
+          <p>You are currently not logged in</p>
         </div>
+
       </div>
       <!-- "window" or portal for rendering templates from routes -->
-      <div ng-view></div>
+      <div class="angular" ng-view></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>

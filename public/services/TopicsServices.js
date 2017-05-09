@@ -12,7 +12,10 @@ angular.module('app')
       return $http.get(`/api/topics/`);
     },
 
-    registerTopic: function(newTopic) {
+    registerTopic: function(name) {
+      let newTopic = {};
+      newTopic.name = name;
+      newTopic.created_by = localStorage.user_id;
       return $http.post(`/api/topics/`,newTopic);
     }
 

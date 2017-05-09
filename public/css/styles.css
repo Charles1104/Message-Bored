@@ -1,19 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=BioRhyme:400,700");
 body {
   padding-top: 20px;
   background-image: url("../images/brickwall.png");
   margin-left: 5%;
   width: 90%; }
   body h1 {
+    font-family: 'BioRhyme', serif;
     text-align: center;
-    margin-bottom: 30px;
-    border: solid black 2px; }
+    margin-bottom: 20px;
+    border: solid black 2px;
+    padding: 5px; }
 
 .mainNav {
+  font-family: 'BioRhyme', serif;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  font-size: 17px; }
+  font-size: 17px;
+  padding-bottom: 10px;
+  border-bottom: black dotted 2px; }
   .mainNav a:link, .mainNav a:visited {
     background-color: #4B85AC;
     color: white;
@@ -25,6 +31,102 @@ body {
     background-color: #376380; }
 
 .logInfo {
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-family: 'BioRhyme', serif;
+  padding-bottom: 5px;
+  border-bottom: black dotted 2px; }
+  .logInfo p {
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+
+.button {
+  font-family: 'BioRhyme', serif;
+  background-color: #DEE4E8;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #555555; }
+
+.button1 {
+  color: #D56B4F; }
+
+.button1:hover {
+  background-color: #555555;
+  color: white; }
+
+.button2 {
+  color: #1B8F15;
+  margin-left: 15px; }
+
+.button2:hover {
+  background-color: #0A6E04;
+  color: white; }
+
+.angular {
+  width: 90%;
+  padding-left: 5%; }
+
+h2 {
+  margin-top: 20px;
+  font-family: 'BioRhyme', serif;
+  text-align: center;
+  border: dashed #0B81BA 2px;
+  color: #0B81BA;
+  padding-bottom: 5px; }
+
+li {
+  font-family: 'BioRhyme', serif;
+  list-style-type: circle; }
+  li a {
+    color: black;
+    text-decoration: none; }
+
+.topicInfo {
+  font-family: 'BioRhyme', serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around; }
+  .topicInfo span {
+    font-weight: 700;
+    font-size: 20px; }
+
+h3 {
+  font-family: 'BioRhyme', serif;
+  font-size: 20px; }
+
+table {
+  border-collapse: collapse;
+  width: 100%; }
+
+th, td {
+  text-align: left;
+  padding: 8px; }
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; }
+
+th {
+  background-color: #4CAF50;
+  color: white; }
+
+.loginPage {
+  font-family: 'BioRhyme', serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center; }
+
+#errorLogin {
+  font-family: 'BioRhyme', serif;
+  color: #E16A08; }
