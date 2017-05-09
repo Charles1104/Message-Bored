@@ -1,0 +1,14 @@
+<h1> TOPIC {{topic.id}} </h1>
+
+<div style="padding: 20px 0; ">
+  {{ topic.name }}<br>
+
+  {{ topic.createdAt | date:'short'}}
+
+  {{ topic.Creator.name }}
+
+  <ul >
+    <li ng-repeat="message in topic.Messages | orderBy:'-createdAt'" >{{ message.Author.name }} + {{ message.createdAt | date:'short'  }} + {{ message.Author.name }}</li>
+  </ul>
+
+</div>

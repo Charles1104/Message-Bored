@@ -1,0 +1,11 @@
+<h1>Messages</h1>
+
+<div style="padding: 20px 0; ">
+
+  <nav>
+    <ul >
+      <li ng-repeat="message in messages | orderBy:'-createdAt'" ><a ng-href="/latest">{{ message.Topic.name }} + {{ message.createdAt | date:'short'  }} + {{ message.Author.name }}</a></li>
+    </ul>
+  </nav>
+
+</div>

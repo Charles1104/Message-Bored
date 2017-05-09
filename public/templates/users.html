@@ -1,0 +1,13 @@
+
+<h1>Users</h1>
+
+<div style="padding: 20px 0; ">
+
+  <nav>
+    <ul >
+      <li ng-repeat="user in users" ><a ng-href="/users/{{ user.id }}">{{ user.name }}</a></li>
+    </ul>
+  </nav>
+
+</div>
+
