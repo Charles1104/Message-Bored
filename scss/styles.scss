@@ -19,7 +19,7 @@ body {
   font-size: 17px;
 
   a:link, a:visited {
-   background-color: #f44336 ;
+   background-color: #4B85AC ;
    color: white;
    padding: 14px 25px;
    text-align: center;
@@ -29,10 +29,12 @@ body {
 
 
   a:hover, a:active {
-   background-color: red;
+   background-color: #376380;
   }
 }
 
 .logInfo{
-  color: green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }

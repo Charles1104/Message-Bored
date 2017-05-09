@@ -25,7 +25,6 @@
 
         <div class="mainNav" ng-if="loggedIn">
           <a ng-href="/">Home</a></li>
-          <input type="submit" value="Log Out" ng-click="logOutUser()">
           <a ng-href= "/users">Users</a>
           <a ng-href="/latest">Latest</a>
           <a ng-href= "/newtopic">Create new topic</a>
@@ -34,6 +33,7 @@
 
         <div class="logInfo" ng-if="loggedIn">
           <p>You are logged in as {{user}}</p>
+          <button type="button" ng-click="logOutUser()">Log Out</button>
         </div>
 
         <div ng-controller= 'TopicsCtrl'>

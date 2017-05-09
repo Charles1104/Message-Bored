@@ -15,14 +15,16 @@ body {
   justify-content: space-around;
   font-size: 17px; }
   .mainNav a:link, .mainNav a:visited {
-    background-color: #f44336;
+    background-color: #4B85AC;
     color: white;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block; }
   .mainNav a:hover, .mainNav a:active {
-    background-color: red; }
+    background-color: #376380; }
 
 .logInfo {
-  color: green; }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; }
